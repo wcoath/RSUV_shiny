@@ -6,7 +6,7 @@ library(gridExtra)
 # Define UI
 ui <- fluidPage(
     titlePanel(
-      h1("Simulating effects of ratio normalisation on SUVR",align = "center")
+      h1("Simulating effects of ratio normalisation on SUVR ",align = "center")
       ),
     sidebarLayout(
         sidebarPanel(
@@ -47,7 +47,7 @@ server <- function(input, output) {
       # Number of observations for each population
       n_population1 <- round(input$proportion / 100 * input$n)
       n_population2 <- input$n - n_population1
-        
+      
       # Generate y for each population based on specified regression equations
       #pop 1 first
       if (input$hsk1 == 'Homoskedastic') {
